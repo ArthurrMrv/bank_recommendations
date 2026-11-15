@@ -22,14 +22,15 @@ def ingest(raw: Path, wh: Path):
                make_date("Year", "Month", "Day") + CAST("Time" AS TIME) AS ts,
                {money("Amount")} AS amount,
                CAST("MCC" AS INT) AS mcc,
-               coalesce("Errors?", '') LIKE '%Insufficient Balance%' AS insufficient_balance
-        FROM read_csv('{raw}/card_transaction.v1.csv',
+               coalesce("Errors?", '') LIKE '%Insufficient Balance%' AS insufficient_balance,
+               "Use Chip" = 'Online Transaction' AS online
+        FROM read_csv('{raw}/credit_card_transactions-ibm_v2.csv',
                       types={{'Amount': 'VARCHAR', 'Errors?': 'VARCHAR', 'Is Fraud?': 'VARCHAR'}})
         WHERE "Is Fraud?" = 'No'
         ORDER BY user_id, ts
     ) TO '{wh}/transactions' (FORMAT parquet, PARTITION_BY (year), OVERWRITE)""")
     con.execute(f"""COPY (
-        SELECT row_number() OVER () - 1 AS user_id, "FICO Score" AS fico,
+        SELECT row_number() OVER () - 1 AS user_id, "FICO Score" AS fico, "Current Age" AS age,
                {money("Yearly Income - Person")} AS income, {money("Total Debt")} AS debt
         FROM read_csv('{raw}/sd254_users.csv')
     ) TO '{wh}/users.parquet'""")

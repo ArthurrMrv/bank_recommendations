@@ -39,14 +39,18 @@ curl -LsSf https://astral.sh/uv/install.sh | sh && source $HOME/.local/bin/env
 export KAGGLE_API_TOKEN=KGAT_...            # type it here, don't upload .env
 
 uv sync                                      # installs Python 3.14 + deps
-uvx kaggle datasets download ealtman2019/credit-card-transactions -p data/raw --unzip
-uv run python -m reco ingest                 # CSV -> data/warehouse (Parquet)
-uv run python -m reco train                  # -> data/user_scores.parquet, data/segment.joblib
+uvx --with six kaggle datasets download ealtman2019/credit-card-transactions -p data/raw --unzip
+uv run python -m reco ingest                 # CSV -> data/warehouse (Parquet), incl. online flag + age
+uv run python -m reco train                  # -> user_scores, personas, user_benefit_value, user_reco (.parquet), segment.joblib
 uv run pytest
 uv run --with nbconvert jupyter nbconvert --to notebook --execute --inplace notebooks/report.ipynb
 ```
 
 Use `tmux` (or `nohup ... &`) for `ingest`/`train` if your connection may drop.
+
+Rerun `ingest` too, not only `train`: personas need the `Use Chip` and `Current Age` columns,
+which older warehouses don't have. Message generation (`python -m messaging`) doesn't need the pod;
+run it locally on the downloaded results.
 
 ## 4. Download the results (on your Mac, from this folder)
 
@@ -56,8 +60,13 @@ ssh -p <PORT> -i ~/.ssh/id_ed25519 root@<IP> \
 | tar xzf -
 ```
 
-You get `data/user_scores.parquet`, `data/segment.joblib`, `data/warehouse/` (needed by the
-notebook) and the executed `notebooks/report.ipynb`.
+You get `data/user_scores.parquet`, `data/user_benefit_value.parquet`, `data/user_reco.parquet`,
+`data/personas.parquet`,
+`data/segment.joblib`, `data/warehouse/` (including `user_mcc.parquet` and `transactions/`, both needed
+by the notebook) and the executed `notebooks/report.ipynb`.
+
+`train` also prints which insurance/subscription MCCs exist in the data. If it says `none`, those
+benefits have no hard value for anyone and are offered on their soft signal only.
 
 ## 5. Stop paying
 

@@ -1,0 +1,174 @@
+% =====================================================================
+% One-pager (consulting-case style): transactions -> tailored message
+% Compile:  pdflatex 1pager.tex     (single page, A4 portrait)
+% To add the classifier comparison chart: see the PLACEHOLDER block and
+% replace it with \includegraphics[width=\linewidth]{classifiers.pdf}
+% =====================================================================
+\documentclass[8pt,a4paper]{extarticle}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=1.1cm]{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+\usepackage[most]{tcolorbox}
+\usepackage[colorlinks=true,urlcolor=blue!50!black,linkcolor=blue!50!black]{hyperref}
+
+\definecolor{navy}{HTML}{14325C}
+\definecolor{cb}{HTML}{3B6EA8}
+\definecolor{ct}{HTML}{1B8A7A}
+\definecolor{ca}{HTML}{E08E0B}
+\definecolor{cg}{HTML}{6C757D}
+\definecolor{cp}{HTML}{7D5BA6}
+\definecolor{cr}{HTML}{C0392B}
+\definecolor{cgr}{HTML}{2E8B57}
+
+\newcommand{\eur}{\texteuro}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\pagestyle{empty}
+\setlist{leftmargin=9pt,itemsep=0.5pt,topsep=1pt,parsep=0pt}
+
+\newcommand{\sect}[1]{{\color{navy}\bfseries\small #1}\par\vspace{-3pt}{\color{navy}\rule{\linewidth}{0.6pt}}\par\vspace{1pt}}
+
+\tikzset{
+  n/.style={rounded corners=2pt,draw=#1!70!black,fill=#1!10,align=center,
+    font=\fontsize{5.6pt}{6.6pt}\selectfont,
+    minimum width=2.0cm,text width=1.85cm,minimum height=1.45cm,inner sep=2pt},
+  n/.default=cb,
+  f/.style={-{Stealth[length=1.5mm]},line width=0.5pt,cg},
+  hdr/.style={font=\fontsize{5.6pt}{6.6pt}\selectfont\bfseries,text=cg!80!black,align=center},
+  badge/.style={circle,fill=ca,text=white,font=\fontsize{5.6pt}{6pt}\selectfont\bfseries,inner sep=0pt,minimum size=3.4mm},
+}
+
+\newtcolorbox{imp}[2]{enhanced,colback=orange!5,colframe=ca!80!black,boxrule=0.5pt,arc=2pt,
+  left=4pt,right=4pt,top=6pt,bottom=3pt,
+  title={#1\ \ #2},coltitle=white,colbacktitle=ca!85!black,fonttitle=\bfseries\small,
+  attach boxed title to top left={yshift=-2.5mm,xshift=4pt},boxed title style={arc=2pt}}
+
+\begin{document}
+
+% ------------------------------ TITLE ------------------------------
+\begin{tcolorbox}[colback=navy,colframe=navy,boxrule=0pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt]
+{\color{white}\bfseries\large A transaction-to-message engine is feasible end to end: the PoC proves the chain, richer content and tone signals are the next lever}\\[2pt]
+{\color{white!80!navy}\footnotesize Proof of concept \,|\, personalised premium-card upgrade offers from raw card transactions \,|\, 15 November 2026}
+\end{tcolorbox}
+\vspace{-3pt}
+
+% ------------------------------ QUESTION / APPROACH / PROOF ------------------------------
+\begin{minipage}[t]{0.605\textwidth}
+\sect{The question}
+How can a bank turn \textbf{raw card transactions} into a \textbf{personal, compliant message} about a benefit that is worth real euros to that customer, at scale, and without wasting contacts?
+
+\vspace{4pt}
+\sect{PoC approach: five questions, answered in order}
+\begin{enumerate}[label=\textbf{\arabic*.},leftmargin=11pt]
+\item \textbf{Understand the spend.} Categorise every transaction into 14 sectors: text classifiers (several trained and compared) plus a deterministic MCC dictionary.
+\item \textbf{Understand the customer.} One row per customer (monthly RFM, category shares, credit health), then PCA + K-Means into 3 segments.
+\item \textbf{Decide whether and what.} An uplift model (X-Learner) removes customers an offer would hurt; own-spend valuation gives \eur/month net of fee; a Thompson-Sampling bandit selects \emph{one} offer.
+\item \textbf{Personalise.} A persona (channel, tone, motivation, language) shapes the wording.
+\item \textbf{Write and control.} An LLM agent drafts; rule checks and an LLM judge must pass, else retry twice, else flag for a human.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.37\textwidth}
+\sect{Proof points}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}p{0.47\linewidth}p{0.47\linewidth}@{}}
+{\Large\bfseries\color{cb}24.4\,M}\newline{\scriptsize transactions processed} &
+{\Large\bfseries\color{cb}2\,000}\newline{\scriptsize customers scored and segmented}\\[3pt]
+{\Large\bfseries\color{cb}425}\newline{\scriptsize ``revolvers'' (21\%) not contacted: an offer would backfire} &
+{\Large\bfseries\color{cb}25/25}\newline{\scriptsize messages approved first attempt, 5 channels, EN/FR}\\
+\end{tabular}
+
+\vspace{3pt}
+{\scriptsize\color{cg}\textbf{Honest scope:} campaign response, personas and offer acceptance are simulated. The numbers show the machinery works, not market lift.}
+\end{minipage}
+
+\vspace{2pt}
+% ------------------------------ PIPELINE ------------------------------
+\vspace{2pt}
+\sect{Target production pipeline: from transaction to tailored message}
+{\centering\vspace{-2pt}
+\begin{tikzpicture}
+\foreach \x/\t in {0/DATA,2.4/NLP\ \&\ CATEGORISE,4.8/PROFILE,7.2/DECIDE,9.6/SELECT,12/PERSONALISE,14.4/GENERATE\ \&\ CHECK,16.8/DELIVER}{
+  \node[hdr] at (\x,3.1) {\t}; \draw[cg!40] (\x-1,2.85)--(\x+1,2.85);}
+\node[n=cg]  (t)   at (0,0)      {\textbf{Transactions}\\card, amount, merchant text, MCC, time};
+\node[n=ct]  (c1)  at (2.4,1.0)  {\textbf{Text classifiers}\\merchant description $\to$ category; several models compared};
+\node[n=ct]  (c2)  at (2.4,-1.0) {\textbf{MCC dictionary}\\ISO 18245 $\to$ 14 sectors (deterministic)};
+\node[n=cb]  (p)   at (4.8,0)    {\textbf{Customer profile}\\RFM, category shares, credit health; 1 row per customer};
+\node[n=cp]  (d1)  at (7.2,2.0)  {\textbf{WHO}: segment\\PCA + K-Means: transactor, baseline, revolver};
+\node[n=cp]  (d2)  at (7.2,0)    {\textbf{SHOULD WE}: uplift\\X-Learner CATE; skip ``sleeping dogs''};
+\node[n=cp]  (d3)  at (7.2,-2.0) {\textbf{WORTH}: value\\own spend $\times$ catalogue = \eur/month net of fee};
+\node[n=ca]  (b)   at (9.6,0)    {\textbf{ONE offer}\\Thompson-Sampling bandit over benefit sectors};
+\node[n=cgr] (ps)  at (12,1.0)   {\textbf{Persona}\\channel, tone, motivation, language};
+\node[n=cgr] (fs)  at (12,-1.0)  {\textbf{Fact sheet}\\only the numbers the model may quote};
+\node[n=cr]  (w)   at (14.4,0)   {\textbf{LLM writer + QA gate}\\5 rule checks + LLM judge ($\geq$4/5)};
+\node[n=cb]  (o1)  at (16.8,1.0) {\textbf{Send}\\SMS, push, e-mail, in-app, phone};
+\node[n=cr]  (o2)  at (16.8,-1.0){\textbf{Retry $\times$2, then flag}\\human review, never a bad message};
+\foreach \a/\b in {t/c1,t/c2,c1/p,c2/p,p/d1,p/d2,p/d3,d1/b,d2/b,d3/b,b/ps,b/fs,ps/w,fs/w,w/o1,w/o2}{
+  \draw[f] (\a.east) -- ++(0.2,0) |- (\b.west);}
+\node[badge] at (w.north east)  {1};
+\node[badge] at (d3.north east) {2};
+\node[badge] at (ps.north east) {3};
+\end{tikzpicture}\par}
+\vspace{2pt}
+
+% ------------------------------ FIGURE + WHY ------------------------------
+\begin{minipage}[t]{0.43\textwidth}
+\sect{Classifier models: comparison}
+% ---------------- PLACEHOLDER: classifier comparison figure ----------------
+% Replace the box below with:  \includegraphics[width=\linewidth]{classifiers.pdf}
+\begin{tcolorbox}[enhanced,colback=gray!5,colframe=white,boxrule=0pt,borderline={0.6pt}{0pt}{cg,dashed},arc=2pt,
+  height=4.0cm,valign=center,halign=center,left=3pt,right=3pt,top=2pt,bottom=2pt]
+{\small\bfseries\color{cg}FIGURE TO INSERT}\\[2pt]
+{\scriptsize Comparison of the classification models trained to map transactions to categories (graph to be provided)}
+\end{tcolorbox}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.55\textwidth}
+\sect{Why this design}
+\begin{itemize}
+\item \textbf{A tree of decisions, not one model.} Each stage has one job and one output, and can be audited or swapped (e.g.\ own classifier $\to$ vendor API) without touching the rest.
+\item \textbf{Value before wording.} The \eur\ figure comes from the customer's own spend; the LLM may only quote numbers from the fact sheet.
+\item \textbf{Guard-rails at both ends.} The uplift gate removes customers an offer would hurt; the QA gate removes messages that break rules (currency, invented numbers, tone, over-promising).
+\item \textbf{Swappable simulators.} Campaign, persona and acceptance are stand-ins; the interfaces take real logs unchanged.
+\end{itemize}
+\end{minipage}
+
+\vspace{4pt}
+% ------------------------------ FURTHER IMPROVEMENTS ------------------------------
+{\color{navy}\bfseries\small Further improvements}\hfill{\tiny\color{cg}numbered badges on the pipeline show where each one plugs in}\par\vspace{-3pt}{\color{navy}\rule{\linewidth}{0.6pt}}\par\vspace{5pt}
+\begin{minipage}[t]{0.325\textwidth}
+\begin{imp}{(1)}{Visual content}
+\textbf{Include images in e-mails} (and in-app): a visual per benefit and persona (hotel, dining, travel\dots) from a vetted, brand-safe library or a generative model, selected by the same persona and offer signals.\\[2pt]
+\textit{Measure:} open and click uplift against text-only (A/B).
+\end{imp}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.325\textwidth}
+\begin{imp}{(2)}{Aspirations, not only value}
+\textbf{Add data sources} (e.g.\ web scraping of public signals) to read \emph{aspirations} on top of euro value. Example: a customer shows an interest in massage $\to$ recommend a \textbf{well-being offer to premium members}.\\[2pt]
+\textit{Guard-rail:} consent and GDPR review before any enrichment.
+\end{imp}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.325\textwidth}
+\begin{imp}{(3)}{Tone from real interactions}
+\textbf{Deduce tone from e-mails}: an agent analyses client--bank exchanges and replaces the synthetic persona. \textbf{Only for curated clients}, those whose spend justifies a new card, so analysis cost is not wasted.\\[2pt]
+\textit{Output:} tone, register and language per client.
+\end{imp}
+\end{minipage}
+
+\vspace{5pt}
+% ------------------------------ RESOURCES ------------------------------
+\begin{tcolorbox}[enhanced,colback=blue!4,colframe=cb!80!black,boxrule=0.5pt,arc=2pt,left=5pt,right=5pt,top=3pt,bottom=3pt]
+\footnotesize
+\textbf{\color{cb!80!black}Repo:} \href{https://github.com/ArthurrMrv/bank_recommendations}{github.com/ArthurrMrv/bank\_recommendations}\quad
+\textbf{\color{cb!80!black}Data:} \href{https://www.kaggle.com/datasets/ealtman2019/credit-card-transactions}{Kaggle, IBM credit-card transactions} (TabFormer, synthetic); \href{https://github.com/greggles/mcc-codes}{MCC list (greggles/mcc-codes)}\\[1pt]
+\textbf{\color{cb!80!black}Methods:} DuckDB and Parquet; scikit-learn (PCA, K-Means); X-Learner (K\"unzel et al., PNAS 2019); linear Thompson Sampling (Agrawal \& Goyal, ICML 2013); LangGraph agent with an OpenRouter-hosted LLM.
+\end{tcolorbox}
+
+\end{document}

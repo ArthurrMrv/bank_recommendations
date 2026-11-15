@@ -1,0 +1,19 @@
+benefit_id,tier,kind,sector,mccs,rate,cap_month,value_per_use,price_month
+std_cashback_all,standard,cashback,all,,0.005,10,,
+std_cashback_groceries,standard,cashback,groceries,,0.01,15,,
+std_points_air_france,standard,partner_points,air,3007,0.01,,,
+std_points_hilton,standard,partner_points,hotel,3504,0.01,,,
+std_purchase_insurance,standard,insurance,retail_online,6300,,5,3,
+std_streaming,standard,subscription,entertainment,4899 5815,,,4,8
+prem_cashback_all,premium,cashback,all,,0.01,20,,
+prem_cashback_dining,premium,cashback,dining,,0.03,30,,
+prem_cashback_fuel,premium,cashback,fuel,,0.03,15,,
+prem_cashback_hotel,premium,cashback,hotel,,0.05,40,,
+prem_points_british_airways,premium,partner_points,air,3005,0.03,,,
+prem_points_singapore,premium,partner_points,air,3075,0.03,,,
+prem_points_hilton,premium,partner_points,hotel,3504,0.03,,,
+prem_travel_insurance,premium,insurance,air,6300 5960,,25,15,
+prem_car_rental_insurance,premium,insurance,car_rental,6300,,15,8,
+prem_streaming,premium,subscription,entertainment,4899 5815,,,6,12
+prem_phone_plan,premium,subscription,telecom_utilities,4814,,,10,20
+prem_gym,premium,subscription,entertainment,7997,,,12,30
