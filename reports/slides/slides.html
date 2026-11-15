@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>From card transactions to personal upgrade offers</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>a{color:#002C77;font-weight:700}@page{size:1440px 810px;margin:0}body{margin:0;background:#fff}section{width:1440px;height:810px;overflow:hidden;break-after:page}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}</style>
+</head><body>
+<section><div style="width: 1440px; height: 810px; box-sizing: border-box; background: #FFFFFF; color: #1F2430; font-family: 'Open Sans', Verdana, sans-serif; display: flex; position: relative">
+<div style="width: 470px; height: 810px; box-sizing: border-box; background: #002C77; color: #FFFFFF; padding: 64px 52px 40px 56px; display: flex; flex-direction: column; gap: 28px">
+<h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 54px; line-height: 1.02; text-transform: uppercase; letter-spacing: 0.5px">From card transactions to personal upgrade offers</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.55">A bank holds millions of card transactions and knows little about what each customer would value. This proof of concept turns raw transactions into one personal, compliant message about a premium card benefit that is worth real euros to that customer, and it stays silent when an offer would do harm.</p>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 15px; font-weight: 700">Arthur Morvan</div>
+<div style="font-size: 14px; color: #C9D6EE">November 2026</div>
+</div>
+</div>
+<div style="flex: 1; box-sizing: border-box; padding: 64px 56px 0 56px; display: flex; flex-direction: column">
+<div style="font-size: 17px; font-weight: 700; color: #1F2430">Executive summary</div>
+<h2 style="margin: 10px 0 0 0; font-size: 23px; line-height: 1.35; font-weight: 700; color: #002C77">The full chain works end to end, and five management questions now have an evidenced answer</h2>
+<div style="margin-top: 28px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: grid; grid-template-columns: 330px minmax(0, 1fr); height: 82px">
+<div style="background: #E9ECF1; padding: 0 22px; display: flex; align-items: center; font-size: 16px; line-height: 1.4">Can we read spend at scale?</div>
+<div style="background: #F6F7F9; padding: 0 22px; display: flex; align-items: center; gap: 18px; font-size: 16px; line-height: 1.4">
+<svg aria-hidden="true" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#002C77" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="17" cy="17" r="15"></circle><path d="M10 17.5l5 5 9-10"></path></svg>
+<span><b>24.4 million</b> transactions sorted into 14 spend sectors</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 330px minmax(0, 1fr); height: 82px">
+<div style="background: #E9ECF1; padding: 0 22px; display: flex; align-items: center; font-size: 16px; line-height: 1.4">Do we know who we are talking to?</div>
+<div style="background: #F6F7F9; padding: 0 22px; display: flex; align-items: center; gap: 18px; font-size: 16px; line-height: 1.4">
+<svg aria-hidden="true" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#002C77" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="17" cy="17" r="15"></circle><path d="M10 17.5l5 5 9-10"></path></svg>
+<span><b>2,000</b> customers profiled on 11 behaviours and grouped into 3 segments</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 330px minmax(0, 1fr); height: 82px">
+<div style="background: #E9ECF1; padding: 0 22px; display: flex; align-items: center; font-size: 16px; line-height: 1.4">Do we know when to stay silent?</div>
+<div style="background: #F6F7F9; padding: 0 22px; display: flex; align-items: center; gap: 18px; font-size: 16px; line-height: 1.4">
+<svg aria-hidden="true" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#002C77" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="17" cy="17" r="15"></circle><path d="M10 17.5l5 5 9-10"></path></svg>
+<span><b>425</b> customers (21%) are held back because an offer would backfire</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 330px minmax(0, 1fr); height: 82px">
+<div style="background: #E9ECF1; padding: 0 22px; display: flex; align-items: center; font-size: 16px; line-height: 1.4">Is the offer worth real money?</div>
+<div style="background: #F6F7F9; padding: 0 22px; display: flex; align-items: center; gap: 18px; font-size: 16px; line-height: 1.4">
+<svg aria-hidden="true" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#002C77" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="17" cy="17" r="15"></circle><path d="M10 17.5l5 5 9-10"></path></svg>
+<span>Every offer is priced in <b>euros per month</b> from the customer's own spend, net of the annual fee</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 330px minmax(0, 1fr); height: 82px">
+<div style="background: #E9ECF1; padding: 0 22px; display: flex; align-items: center; font-size: 16px; line-height: 1.4">Is every message safe to send?</div>
+<div style="background: #F6F7F9; padding: 0 22px; display: flex; align-items: center; gap: 18px; font-size: 16px; line-height: 1.4">
+<svg aria-hidden="true" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#002C77" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="17" cy="17" r="15"></circle><path d="M10 17.5l5 5 9-10"></path></svg>
+<span><b>25 of 25</b> messages passed rule checks and an independent review at the first attempt</span>
+</div>
+</div>
+</div>
+<p style="margin: 26px 0 0 0; font-size: 14px; line-height: 1.55; color: #4A5261">Scope of the evidence. The transaction data is synthetic, and campaign response, personas and offer acceptance are simulated. The results prove that the machinery works, they do not yet measure market lift.</p>
+<div style="position: absolute; right: 56px; bottom: 24px; font-size: 12px; color: #4A5261">1</div>
+</div>
+</div></section>
+<section><div style="width: 1440px; height: 810px; box-sizing: border-box; background: #FFFFFF; color: #1F2430; font-family: 'Open Sans', Verdana, sans-serif; padding: 52px 64px 0 64px; display: flex; flex-direction: column; position: relative">
+<h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 46px; line-height: 1; text-transform: uppercase; letter-spacing: 0.5px; color: #002C77">The approach</h1>
+<h2 style="margin: 14px 0 0 0; font-size: 22px; line-height: 1.35; font-weight: 700; color: #1F2430; max-width: 1180px">Five questions are answered in order, and each stage has one job and one output that can be audited or replaced</h2>
+<div style="margin-top: 30px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 22px; height: 468px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="width: 64px; height: 64px; border-radius: 50%; background: #002C77; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="24" height="16" rx="2"></rect><path d="M3 12.5h24M7.5 18.5h5"></path></svg>
+</div>
+<div style="font-size: 18px; font-weight: 700; color: #002C77; line-height: 1.25">1. Understand the spend</div>
+<div style="font-size: 14.5px; line-height: 1.5">Every transaction is mapped to one of 14 spend sectors, from groceries and fuel to air travel and hotels.</div>
+<div style="margin-top: auto; background: #EEF0F4; padding: 16px 16px 18px 16px; height: 204px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 13px; font-weight: 700; color: #002C77">Why this choice</div>
+<div style="font-size: 13.5px; line-height: 1.45">Text classifiers were benchmarked first. A simple linear model matched a fine tuned transformer at 0.99 macro F1. Where a merchant code exists it is used, as it is exact and auditable.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="width: 64px; height: 64px; border-radius: 50%; background: #002C77; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="10.5" r="4.5"></circle><path d="M6 25c0-5 4-8 9-8s9 3 9 8"></path></svg>
+</div>
+<div style="font-size: 18px; font-weight: 700; color: #002C77; line-height: 1.25">2. Understand the customer</div>
+<div style="font-size: 14.5px; line-height: 1.5">One row per customer captures spend rhythm, sector mix and credit health. Customers are then grouped into 3 segments.</div>
+<div style="margin-top: auto; background: #EEF0F4; padding: 16px 16px 18px 16px; height: 204px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 13px; font-weight: 700; color: #002C77">Why this choice</div>
+<div style="font-size: 13.5px; line-height: 1.45">The number of segments is set by the data, and each one is named by a plain rule so that business teams can read it without a data scientist.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="width: 64px; height: 64px; border-radius: 50%; background: #002C77; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 26v-8M15 18L7 10V4M15 18l8-8V4"></path><path d="M4 7l3-3 3 3M20 7l3-3 3 3"></path></svg>
+</div>
+<div style="font-size: 18px; font-weight: 700; color: #002C77; line-height: 1.25">3. Decide whether and what</div>
+<div style="font-size: 14.5px; line-height: 1.5">An uplift model screens out customers an offer would hurt. Each benefit is priced in euros per month, and a learning algorithm selects one offer.</div>
+<div style="margin-top: auto; background: #EEF0F4; padding: 16px 16px 18px 16px; height: 204px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 13px; font-weight: 700; color: #002C77">Why this choice</div>
+<div style="font-size: 13.5px; line-height: 1.45">Value comes before wording. The decision rests on money the customer already spends, and no contact is wasted on someone who should not be approached.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="width: 64px; height: 64px; border-radius: 50%; background: #002C77; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h22M4 15h22M4 22h22"></path><circle cx="10" cy="8" r="2.6" fill="#002C77"></circle><circle cx="20" cy="15" r="2.6" fill="#002C77"></circle><circle cx="13" cy="22" r="2.6" fill="#002C77"></circle></svg>
+</div>
+<div style="font-size: 18px; font-weight: 700; color: #002C77; line-height: 1.25">4. Personalise</div>
+<div style="font-size: 14.5px; line-height: 1.5">A persona records the preferred channel, tone, motivation and language of each customer and shapes the wording.</div>
+<div style="margin-top: auto; background: #EEF0F4; padding: 16px 16px 18px 16px; height: 204px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 13px; font-weight: 700; color: #002C77">Why this choice</div>
+<div style="font-size: 13.5px; line-height: 1.45">Two customers with the same spend read the same message differently. Keeping the persona apart from the offer lets real preference data replace it later.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="width: 64px; height: 64px; border-radius: 50%; background: #002C77; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3l10 4v7c0 6-4 10.5-10 13-6-2.500-10-7-10-13V7z"></path><path d="M10.500 15l3.500 3.500 6-7"></path></svg>
+</div>
+<div style="font-size: 18px; font-weight: 700; color: #002C77; line-height: 1.25">5. Write and control</div>
+<div style="font-size: 14.5px; line-height: 1.5">An AI writer drafts the message. Rule checks and an independent AI reviewer must both pass before anything is sent.</div>
+<div style="margin-top: auto; background: #EEF0F4; padding: 16px 16px 18px 16px; height: 204px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 13px; font-weight: 700; color: #002C77">Why this choice</div>
+<div style="font-size: 13.5px; line-height: 1.45">A failed draft is retried twice and then passed to a person. A weak message is never sent, which protects the brand and the customer.</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 22px; background: #002C77; color: #FFFFFF; padding: 0 28px; height: 64px; box-sizing: border-box; display: flex; align-items: center; font-size: 16.5px; line-height: 1.4"><span><b>What comes out.</b> One offer, one channel and one checked message per customer, or a deliberate decision not to contact.</span></div>
+<div style="position: absolute; left: 64px; bottom: 24px; font-size: 12px; color: #4A5261"><br></div>
+<div style="position: absolute; right: 64px; bottom: 24px; font-size: 12px; color: #4A5261">2</div>
+</div></section>
+<section><div style="width: 1440px; height: 810px; box-sizing: border-box; background: #FFFFFF; color: #1F2430; font-family: 'Open Sans', Verdana, sans-serif; padding: 52px 64px 0 64px; display: flex; flex-direction: column; position: relative">
+<h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 46px; line-height: 1; text-transform: uppercase; letter-spacing: 0.5px; color: #002C77">The decision engine</h1>
+<h2 style="margin: 14px 0 0 0; font-size: 22px; line-height: 1.35; font-weight: 700; color: #1F2430; max-width: 1180px">Three tests decide who is contacted and with what, and one customer in five is deliberately left alone</h2>
+<div style="margin-top: 30px; display: flex; gap: 40px; height: 540px">
+<div style="width: 800px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 16px; font-weight: 700; margin-bottom: 8px">Who the customers are</div>
+<div style="display: grid; grid-template-columns: 150px 120px 130px minmax(0, 1fr) 180px; background: #002C77; color: #FFFFFF; font-size: 13px; font-weight: 700; height: 44px; align-items: center">
+<div style="padding: 0 16px">Segment</div>
+<div style="padding: 0 12px">Customers</div>
+<div style="padding: 0 12px">Monthly spend</div>
+<div style="padding: 0 12px">What sets them apart</div>
+<div style="padding: 0 16px">Treatment</div>
+</div>
+<div style="display: grid; grid-template-columns: 150px 120px 130px minmax(0, 1fr) 180px; background: #F6F7F9; font-size: 14.5px; line-height: 1.4; height: 92px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Baseline</div>
+<div style="padding: 0 12px"><b>1,207</b> (60%)</div>
+<div style="padding: 0 12px">€3,120</div>
+<div style="padding: 0 12px">Everyday spend, less recent card activity</div>
+<div style="padding: 0 16px">Offer the benefit with the highest euro value</div>
+</div>
+<div style="display: grid; grid-template-columns: 150px 120px 130px minmax(0, 1fr) 180px; background: #F6F7F9; font-size: 14.5px; line-height: 1.4; height: 92px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Transactor</div>
+<div style="padding: 0 12px"><b>368</b> (18%)</div>
+<div style="padding: 0 12px">€4,096</div>
+<div style="padding: 0 12px">Travel is 19% of spend, strongest credit score, active every week</div>
+<div style="padding: 0 16px">Priority target for premium travel benefits</div>
+</div>
+<div style="display: grid; grid-template-columns: 150px 120px 130px minmax(0, 1fr) 180px; background: #E9ECF1; font-size: 14.5px; line-height: 1.4; height: 92px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Revolver</div>
+<div style="padding: 0 12px"><b>425</b> (21%)</div>
+<div style="padding: 0 12px">€7,596</div>
+<div style="padding: 0 12px">Card utilisation of 24%, cash advances at 13% of spend</div>
+<div style="padding: 0 16px; font-weight: 700">Not contacted</div>
+</div>
+<div style="margin-top: 22px; font-size: 14px; font-weight: 700">Share of customers by segment</div>
+<div style="margin-top: 4px; display: flex; gap: 4px; height: 46px; font-size: 13.5px; font-weight: 700">
+<div style="flex: 1207 1 0; background: #002C77; color: #FFFFFF; display: flex; align-items: center; padding: 0 14px">Baseline 60%</div>
+<div style="flex: 368 1 0; background: #5B7FBF; color: #FFFFFF; display: flex; align-items: center; padding: 0 12px; white-space: nowrap; background: #3F66AD">Transactor 18%</div>
+<div style="flex: 425 1 0; background: #C5CCD8; color: #1F2430; display: flex; align-items: center; padding: 0 12px; white-space: nowrap">Revolver 21%</div>
+</div>
+<p style="margin: 18px 0 0 0; font-size: 13.5px; line-height: 1.5; color: #4A5261">Revolvers spend the most, yet they carry the highest credit risk. In the simulated campaign an upgrade offer lowers their response, so the engine holds them back. Response effects come from a simulated campaign with a known true effect, used to test that the method recovers it.</p>
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 16px; font-weight: 700; margin-bottom: 0">The three tests</div>
+<div style="background: #EEF0F4; padding: 18px 22px; display: flex; gap: 20px; align-items: center; flex: 1">
+<div style="width: 150px; flex-shrink: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 62px; line-height: 1; color: #002C77">×2</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 15px; font-weight: 700; color: #002C77">Should we contact this customer?</div>
+<div style="font-size: 13.500px; line-height: 1.45">Targeting the top half by predicted uplift doubles the effect of an offer, from 8.3 to 16.4 points. Estimated and true uplift correlate at 0.75.</div>
+</div>
+</div>
+<div style="background: #EEF0F4; padding: 18px 22px; display: flex; gap: 20px; align-items: center; flex: 1">
+<div style="width: 150px; flex-shrink: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 62px; line-height: 1; color: #002C77">97%</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 15px; font-weight: 700; color: #002C77">What is the offer worth?</div>
+<div style="font-size: 13.500px; line-height: 1.45">Share of customers for whom the premium card pays for itself after the €240 annual fee, based on their own spend and an 18 benefit catalogue.</div>
+</div>
+</div>
+<div style="background: #EEF0F4; padding: 18px 22px; display: flex; gap: 20px; align-items: center; flex: 1">
+<div style="width: 150px; flex-shrink: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 62px; line-height: 1; color: #002C77">€7.56</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 15px; font-weight: 700; color: #002C77">Which single offer?</div>
+<div style="font-size: 13.500px; line-height: 1.45">Monthly value per contact once the algorithm has learned, which is 97% of the best achievable (€7.81) and twice a random offer (€3.61).</div>
+</div>
+</div>
+</div>
+</div>
+<div style="position: absolute; left: 64px; bottom: 24px; font-size: 12px; color: #4A5261"><br></div>
+<div style="position: absolute; right: 64px; bottom: 24px; font-size: 12px; color: #4A5261">3</div>
+</div></section>
+<section><div style="width: 1440px; height: 810px; box-sizing: border-box; background: #FFFFFF; color: #1F2430; font-family: 'Open Sans', Verdana, sans-serif; padding: 52px 64px 0 64px; display: flex; flex-direction: column; position: relative">
+<h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 46px; line-height: 1; text-transform: uppercase; letter-spacing: 0.5px; color: #002C77">The message</h1>
+<h2 style="margin: 14px 0 0 0; font-size: 22px; line-height: 1.35; font-weight: 700; color: #1F2430; max-width: 1180px">Every message is written from verified facts and must pass two independent controls before it leaves the bank</h2>
+<div style="margin-top: 30px; display: flex; align-items: stretch; gap: 10px; height: 318px">
+<div style="flex: 1; display: flex; flex-direction: column">
+<div style="background: #002C77; color: #FFFFFF; height: 48px; display: flex; align-items: center; padding: 0 18px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; text-transform: uppercase; letter-spacing: 0.5px">Inputs</div>
+<div style="flex: 1; background: #EEF0F4; padding: 16px 18px; font-size: 14px; line-height: 1.5; display: flex; flex-direction: column; gap: 10px">
+<div><b>Fact sheet.</b> The only numbers the writer may quote, such as the monthly value of the benefit and the net gain after the fee.</div>
+<div><b>Persona.</b> Channel, tone, motivation, digital comfort and language.</div>
+</div>
+</div>
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#002C77" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="align-self: center; flex-shrink: 0"><path d="M9 4l9 9-9 9"></path></svg>
+<div style="flex: 1; display: flex; flex-direction: column">
+<div style="background: #002C77; color: #FFFFFF; height: 48px; display: flex; align-items: center; padding: 0 18px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; text-transform: uppercase; letter-spacing: 0.5px">AI writer</div>
+<div style="flex: 1; background: #EEF0F4; padding: 16px 18px; font-size: 14px; line-height: 1.5; display: flex; flex-direction: column; gap: 10px">
+<div>A language model drafts one short message under the name Claire, the assistant of the bank.</div>
+<div>It states the value of the benefit first and never promises approval or guaranteed returns.</div>
+</div>
+</div>
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#002C77" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="align-self: center; flex-shrink: 0"><path d="M9 4l9 9-9 9"></path></svg>
+<div style="flex: 1; display: flex; flex-direction: column">
+<div style="background: #002C77; color: #FFFFFF; height: 48px; display: flex; align-items: center; padding: 0 18px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; text-transform: uppercase; letter-spacing: 0.5px">Control 1, rules</div>
+<div style="flex: 1; background: #EEF0F4; padding: 16px 18px; font-size: 14px; line-height: 1.5; display: flex; flex-direction: column; gap: 6px">
+<div>Five automatic checks</div>
+<div>• Amounts shown in € only</div>
+<div>• Greeting in the right language</div>
+<div>• Signed by Claire</div>
+<div>• Every number found in the fact sheet</div>
+<div>• Length within the channel limit</div>
+</div>
+</div>
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#002C77" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="align-self: center; flex-shrink: 0"><path d="M9 4l9 9-9 9"></path></svg>
+<div style="flex: 1; display: flex; flex-direction: column">
+<div style="background: #002C77; color: #FFFFFF; height: 48px; display: flex; align-items: center; padding: 0 18px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; text-transform: uppercase; letter-spacing: 0.5px">Control 2, reviewer</div>
+<div style="flex: 1; background: #EEF0F4; padding: 16px 18px; font-size: 14px; line-height: 1.5; display: flex; flex-direction: column; gap: 10px">
+<div>A second, independent model scores the draft from 1 to 5 on seven criteria and needs at least 4 on each.</div>
+<div>Tone, motivation, channel fit, language, clarity, no overpromise, factual accuracy.</div>
+</div>
+</div>
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#002C77" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="align-self: center; flex-shrink: 0"><path d="M9 4l9 9-9 9"></path></svg>
+<div style="flex: 1; display: flex; flex-direction: column">
+<div style="background: #002C77; color: #FFFFFF; height: 48px; display: flex; align-items: center; padding: 0 18px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; text-transform: uppercase; letter-spacing: 0.5px">Outcome</div>
+<div style="flex: 1; background: #EEF0F4; padding: 16px 18px; font-size: 14px; line-height: 1.5; display: flex; flex-direction: column; gap: 10px">
+<div><b>Pass.</b> The message is approved for the preferred channel of the customer.</div>
+<div><b>Fail.</b> The writer retries twice with the feedback, then the case is flagged for a person.</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 26px; display: flex; gap: 40px; height: 188px">
+<div style="width: 560px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 16px; font-weight: 700">What the test run showed</div>
+<div style="flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<div style="background: #F6F7F9; padding: 18px 18px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 54px; line-height: 1; color: #002C77">25 / 25</div>
+<div style="font-size: 13.5px; line-height: 1.45">messages approved at the first attempt</div>
+</div>
+<div style="background: #F6F7F9; padding: 18px 18px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 54px; line-height: 1; color: #002C77">5</div>
+<div style="font-size: 13.5px; line-height: 1.45">channels covered in the same run</div>
+</div>
+<div style="background: #F6F7F9; padding: 18px 18px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 54px; line-height: 1; color: #002C77">2</div>
+<div style="font-size: 13.5px; line-height: 1.45">languages, 15 messages in English and 10 in French</div>
+</div>
+</div>
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 16px; font-weight: 700">Length limit by channel, in characters</div>
+<div style="flex: 1; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px">
+<div style="background: #F6F7F9; padding: 18px 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #002C77">180</div>
+<div style="font-size: 14px; font-weight: 700">Push</div>
+</div>
+<div style="background: #F6F7F9; padding: 18px 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #002C77">320</div>
+<div style="font-size: 14px; font-weight: 700">SMS</div>
+</div>
+<div style="background: #F6F7F9; padding: 18px 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #002C77">400</div>
+<div style="font-size: 14px; font-weight: 700">In app</div>
+</div>
+<div style="background: #F6F7F9; padding: 18px 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #002C77">800</div>
+<div style="font-size: 14px; font-weight: 700">Phone script</div>
+</div>
+<div style="background: #F6F7F9; padding: 18px 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #002C77">1,200</div>
+<div style="font-size: 14px; font-weight: 700">Email</div>
+</div>
+</div>
+</div>
+</div>
+<div style="position: absolute; left: 64px; bottom: 24px; font-size: 12px; color: #4A5261"><br></div>
+<div style="position: absolute; right: 64px; bottom: 24px; font-size: 12px; color: #4A5261">4</div>
+</div></section>
+<section><div style="width: 1440px; height: 810px; box-sizing: border-box; background: #FFFFFF; color: #1F2430; font-family: 'Open Sans', Verdana, sans-serif; padding: 52px 64px 0 64px; display: flex; flex-direction: column; position: relative">
+<h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 46px; line-height: 1; text-transform: uppercase; letter-spacing: 0.5px; color: #002C77">Two messages side by side</h1>
+<h2 style="margin: 14px 0 0 0; font-size: 22px; line-height: 1.35; font-weight: 700; color: #1F2430; max-width: 1180px">The same engine writes two very different messages, because the spend and the persona differ</h2>
+<div style="margin-top: 26px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; height: 500px">
+<div style="display: flex; flex-direction: column">
+<div style="background: #002C77; color: #FFFFFF; height: 48px; display: flex; align-items: center; padding: 0 20px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; text-transform: uppercase; letter-spacing: 0.5px">Customer A, the frequent hotel guest</div>
+<div style="background: #EEF0F4; padding: 16px 20px; display: grid; grid-template-columns: 150px minmax(0, 1fr); row-gap: 8px; font-size: 14px; line-height: 1.45">
+<div style="font-weight: 700; color: #002C77">Behaviour</div>
+<div>Hotel spend high enough to reach the monthly cash-back cap</div>
+<div style="font-weight: 700; color: #002C77">Offer selected</div>
+<div>5% cash-back on hotels, worth €40 per month</div>
+<div style="font-weight: 700; color: #002C77">Persona</div>
+<div>Motivated by status, exclusive tone</div>
+<div style="font-weight: 700; color: #002C77">Delivery</div>
+<div>Push notification in English, 180 characters at most</div>
+</div>
+<div style="flex: 1; background: #F6F7F9; margin-top: 10px; padding: 22px 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 13px; font-weight: 700; color: #4A5261">Message sent, quoted as generated</div>
+<div style="font-size: 18px; line-height: 1.55; display: flex; flex-direction: column; gap: 8px">
+<div>Hello,</div>
+<div>With your premium card, you earn €40/month cash-back on hotel stays, netting you €88/month after the fee. Enjoy the perks of exclusivity!</div>
+<div>Claire</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column">
+<div style="background: #002C77; color: #FFFFFF; height: 48px; display: flex; align-items: center; padding: 0 20px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; text-transform: uppercase; letter-spacing: 0.5px">Customer B, the everyday spender</div>
+<div style="background: #EEF0F4; padding: 16px 20px; display: grid; grid-template-columns: 150px minmax(0, 1fr); row-gap: 8px; font-size: 14px; line-height: 1.45">
+<div style="font-weight: 700; color: #002C77">Behaviour</div>
+<div>Spend spread across sectors, with no single one standing out</div>
+<div style="font-weight: 700; color: #002C77">Offer selected</div>
+<div>1% cash-back on all purchases, worth €20 per month</div>
+<div style="font-weight: 700; color: #002C77">Persona</div>
+<div>Motivated by savings, concise and factual tone, low digital comfort</div>
+<div style="font-weight: 700; color: #002C77">Delivery</div>
+<div>Phone script in French, 800 characters at most</div>
+</div>
+<div style="flex: 1; background: #F6F7F9; margin-top: 10px; padding: 22px 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 13px; font-weight: 700; color: #4A5261">Message sent, quoted as generated</div>
+<div lang="fr" style="font-size: 18px; line-height: 1.55; display: flex; flex-direction: column; gap: 8px">
+<div>Bonjour,</div>
+<div>Avec votre carte premium, vous bénéficiez d'un cash-back de 1% sur tous vos achats, ce qui vous rapporte 20&nbsp;€ par mois, soit 240&nbsp;€ par an. Après la cotisation de 240&nbsp;€ pour la carte, vous avez un gain net de 70&nbsp;€ chaque mois. Cela représente une belle économie pour vous&nbsp;!</div>
+<div>Claire</div>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 20px; background: #002C77; color: #FFFFFF; padding: 0 28px; height: 64px; box-sizing: border-box; display: flex; align-items: center; font-size: 16.5px; line-height: 1.4"><span><b>What stays the same.</b> Both messages are signed Claire, the name given to the AI assistant of the bank. Both quote only figures from the fact sheet and passed both controls at the first attempt.</span></div>
+<div style="position: absolute; left: 64px; bottom: 24px; font-size: 12px; color: #4A5261"><br></div>
+<div style="position: absolute; right: 64px; bottom: 24px; font-size: 12px; color: #4A5261">5</div>
+</div></section>
+<section><div style="width: 1440px; height: 810px; box-sizing: border-box; background: #FFFFFF; color: #1F2430; font-family: 'Open Sans', Verdana, sans-serif; padding: 52px 64px 0 64px; display: flex; flex-direction: column; position: relative">
+<h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 46px; line-height: 1; text-transform: uppercase; letter-spacing: 0.5px; color: #002C77">Scope and next steps</h1>
+<h2 style="margin: 14px 0 0 0; font-size: 22px; line-height: 1.35; font-weight: 700; color: #1F2430; max-width: 1180px">The machinery is proven, and the next step is a live pilot that replaces simulated inputs with real ones</h2>
+<div style="margin-top: 30px; display: flex; gap: 40px; height: 452px">
+<div style="width: 560px; display: flex; flex-direction: column; gap: 14px">
+<div style="flex: 1; background: #EEF0F4; padding: 20px 24px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 16px; font-weight: 700; color: #002C77">What is proven today</div>
+<div style="display: flex; gap: 12px; font-size: 14px; line-height: 1.45"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#002C77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><path d="M4 10.5l4 4 8-9"></path></svg><span>The chain runs end to end on 24.4 million transactions and 2,000 customers</span></div>
+<div style="display: flex; gap: 12px; font-size: 14px; line-height: 1.45"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#002C77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><path d="M4 10.5l4 4 8-9"></path></svg><span>Guardrails work at both ends, on who is contacted and on what is sent</span></div>
+<div style="display: flex; gap: 12px; font-size: 14px; line-height: 1.45"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#002C77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><path d="M4 10.5l4 4 8-9"></path></svg><span>Each stage is tested on its own and can be swapped, for example for a vendor service, without touching the rest</span></div>
+</div>
+<div style="flex: 1; background: #EEF0F4; padding: 20px 24px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 16px; font-weight: 700; color: #002C77">What is still simulated</div>
+<div style="display: flex; gap: 12px; font-size: 14px; line-height: 1.45"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#002C77" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="10" cy="10" r="5.5"></circle></svg><span>Transactions come from a public synthetic data set, not from real customers</span></div>
+<div style="display: flex; gap: 12px; font-size: 14px; line-height: 1.45"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#002C77" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="10" cy="10" r="5.5"></circle></svg><span>Campaign response and offer acceptance, as no campaign history exists in the data</span></div>
+<div style="display: flex; gap: 12px; font-size: 14px; line-height: 1.45"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#002C77" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="10" cy="10" r="5.5"></circle></svg><span>Personas and the benefit catalogue. The interfaces accept real logs unchanged</span></div>
+</div>
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 16px; font-weight: 700">Three improvements to raise relevance beyond the pilot</div>
+<div style="flex: 1; background: #F6F7F9; padding: 16px 22px; display: flex; gap: 20px; align-items: center">
+<div style="width: 52px; height: 52px; border-radius: 50%; background: #002C77; color: #FFFFFF; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 28px">1</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 15.5px; font-weight: 700; color: #002C77">Visual content</div>
+<div style="font-size: 13.5px; line-height: 1.45">Add an image per benefit and persona to emails and in app messages, drawn from a vetted, brand safe library. Success is measured by open and click uplift against text only.</div>
+</div>
+</div>
+<div style="flex: 1; background: #F6F7F9; padding: 16px 22px; display: flex; gap: 20px; align-items: center">
+<div style="width: 52px; height: 52px; border-radius: 50%; background: #002C77; color: #FFFFFF; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 28px">2</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 15.5px; font-weight: 700; color: #002C77">Aspirations, not only value</div>
+<div style="font-size: 13.5px; line-height: 1.45">Add data sources that reveal what a customer aspires to, for example an interest in wellbeing that points to a premium wellbeing offer. Consent and data protection review come first.</div>
+</div>
+</div>
+<div style="flex: 1; background: #F6F7F9; padding: 16px 22px; display: flex; gap: 20px; align-items: center">
+<div style="width: 52px; height: 52px; border-radius: 50%; background: #002C77; color: #FFFFFF; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 28px">3</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 15.5px; font-weight: 700; color: #002C77">Tone from real interactions</div>
+<div style="font-size: 13.5px; line-height: 1.45">Read tone, register and language from past exchanges between the customer and the bank, replacing the synthetic persona. Applied only to customers whose spend justifies a new card.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 22px; background: #002C77; color: #FFFFFF; padding: 0 28px; height: 78px; box-sizing: border-box; display: flex; align-items: center; font-size: 16px; line-height: 1.45"><span><b>Recommended next step.</b> Run a controlled pilot on a consented customer sample with a holdout group, so that real response data replaces the simulated campaign and market lift can be measured.</span></div>
+<div style="position: absolute; left: 64px; bottom: 24px; font-size: 12px; color: #4A5261"><br></div>
+<div style="position: absolute; right: 64px; bottom: 24px; font-size: 12px; color: #4A5261">6</div>
+</div></section>
+<section><div style="width: 1440px; height: 810px; box-sizing: border-box; background: #FFFFFF; color: #1F2430; font-family: 'Open Sans', Verdana, sans-serif; padding: 52px 64px 0 64px; display: flex; flex-direction: column; position: relative">
+<h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 46px; line-height: 1; text-transform: uppercase; letter-spacing: 0.5px; color: #002C77">Sources and links</h1>
+<h2 style="margin: 14px 0 0 0; font-size: 22px; line-height: 1.35; font-weight: 700; color: #1F2430; max-width: 1180px">Code, data and methods are public, so every result in this deck can be reproduced</h2>
+<div style="margin-top: 28px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #002C77; color: #FFFFFF; font-size: 13px; font-weight: 700; height: 42px; align-items: center">
+<div style="padding: 0 16px">Type</div>
+<div style="padding: 0 12px">Resource</div>
+<div style="padding: 0 12px">Used for</div>
+<div style="padding: 0 16px">Link</div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #E9ECF1; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Code</div>
+<div style="padding: 0 12px; font-weight: 700">Project repository</div>
+<div style="padding: 0 12px">Full pipeline, tests, notebook and reports</div>
+<div style="padding: 0 16px"><a href="https://github.com/ArthurrMrv/bank_recommendations">github.com/ArthurrMrv/bank_recommendations</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #F6F7F9; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Data</div>
+<div style="padding: 0 12px; font-weight: 700">IBM synthetic card transactions</div>
+<div style="padding: 0 12px">24.4 million transactions, 2,000 customers and their cards</div>
+<div style="padding: 0 16px"><a href="https://www.kaggle.com/datasets/ealtman2019/credit-card-transactions">kaggle.com/datasets/ealtman2019/credit-card-transactions</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #F6F7F9; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Data</div>
+<div style="padding: 0 12px; font-weight: 700">Merchant category code list</div>
+<div style="padding: 0 12px">Standard codes that map each merchant to a spend sector</div>
+<div style="padding: 0 16px"><a href="https://github.com/greggles/mcc-codes">github.com/greggles/mcc-codes</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #E9ECF1; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Model</div>
+<div style="padding: 0 12px; font-weight: 700">PCA and K-Means, scikit-learn</div>
+<div style="padding: 0 12px">Customer segmentation into transactor, baseline and revolver</div>
+<div style="padding: 0 16px"><a href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn.org/stable/modules/clustering.html</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #E9ECF1; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Model</div>
+<div style="padding: 0 12px; font-weight: 700">X-Learner, Künzel et al., PNAS 2019</div>
+<div style="padding: 0 12px">Uplift estimate that decides whether to contact a customer</div>
+<div style="padding: 0 16px"><a href="https://www.pnas.org/doi/10.1073/pnas.1804597116">pnas.org/doi/10.1073/pnas.1804597116</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #E9ECF1; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Model</div>
+<div style="padding: 0 12px; font-weight: 700">Linear Thompson Sampling, Agrawal and Goyal, ICML 2013</div>
+<div style="padding: 0 12px">Learning algorithm that selects the single offer</div>
+<div style="padding: 0 16px"><a href="https://proceedings.mlr.press/v28/agrawal13.html">proceedings.mlr.press/v28/agrawal13.html</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #E9ECF1; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Model</div>
+<div style="padding: 0 12px; font-weight: 700">LangGraph agent with a hosted language model</div>
+<div style="padding: 0 12px">Message writer and independent reviewer, served through OpenRouter</div>
+<div style="padding: 0 16px"><a href="https://github.com/langchain-ai/langgraph">github.com/langchain-ai/langgraph</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #F6F7F9; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Benchmark</div>
+<div style="padding: 0 12px; font-weight: 700">MiniLM transaction classifier</div>
+<div style="padding: 0 12px">Transformer baseline that the linear text classifier was compared with</div>
+<div style="padding: 0 16px"><a href="https://huggingface.co/maaz-zaidi/transaction-classifier-minilm-en-ca">huggingface.co/maaz-zaidi/transaction-classifier-minilm-en-ca</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #F6F7F9; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Benchmark</div>
+<div style="padding: 0 12px; font-weight: 700">Labelled transaction descriptions</div>
+<div style="padding: 0 12px">About 4.5 million labelled transactions used for the classifier comparison</div>
+<div style="padding: 0 16px"><a href="https://huggingface.co/datasets/mitulshah/transaction-categorization">huggingface.co/datasets/mitulshah/transaction-categorization</a></div>
+</div>
+</div>
+<div style="position: absolute; left: 64px; bottom: 24px; font-size: 12px; color: #4A5261"><br></div>
+<div style="position: absolute; right: 64px; bottom: 24px; font-size: 12px; color: #4A5261">7</div>
+</div></section>
+</body></html>
