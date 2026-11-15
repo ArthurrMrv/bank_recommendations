@@ -10,3 +10,11 @@ build/
 .ipynb_checkpoints
 *.log
 data/
+.pytest_cache/
+
+# LaTeX build files
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
