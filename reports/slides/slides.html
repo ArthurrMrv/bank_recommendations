@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>From card transactions to personal upgrade offers</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<style>@page{size:1440px 810px;margin:0}body{margin:0;background:#fff}section{width:1440px;height:810px;overflow:hidden;break-after:page}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}</style>
+<style>a{color:#002C77;font-weight:700}@page{size:1440px 810px;margin:0}body{margin:0;background:#fff}section{width:1440px;height:810px;overflow:hidden;break-after:page}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}</style>
 </head><body>
 <section><div style="width: 1440px; height: 810px; box-sizing: border-box; background: #FFFFFF; color: #1F2430; font-family: 'Open Sans', Verdana, sans-serif; display: flex; position: relative">
 <div style="width: 470px; height: 810px; box-sizing: border-box; background: #002C77; color: #FFFFFF; padding: 64px 52px 40px 56px; display: flex; flex-direction: column; gap: 28px">
@@ -331,5 +331,73 @@
 <div style="margin-top: 22px; background: #002C77; color: #FFFFFF; padding: 0 28px; height: 78px; box-sizing: border-box; display: flex; align-items: center; font-size: 16px; line-height: 1.45"><span><b>Recommended next step.</b> Run a controlled pilot on a consented customer sample with a holdout group, so that real response data replaces the simulated campaign and market lift can be measured.</span></div>
 <div style="position: absolute; left: 64px; bottom: 24px; font-size: 12px; color: #4A5261">Prepared by Arthur</div>
 <div style="position: absolute; right: 64px; bottom: 24px; font-size: 12px; color: #4A5261">5</div>
+</div></section>
+<section><div style="width: 1440px; height: 810px; box-sizing: border-box; background: #FFFFFF; color: #1F2430; font-family: 'Open Sans', Verdana, sans-serif; padding: 52px 64px 0 64px; display: flex; flex-direction: column; position: relative">
+<h1 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 46px; line-height: 1; text-transform: uppercase; letter-spacing: 0.5px; color: #002C77">Sources and links</h1>
+<h2 style="margin: 14px 0 0 0; font-size: 22px; line-height: 1.35; font-weight: 700; color: #1F2430; max-width: 1180px">Code, data and methods are public, so every result in this deck can be reproduced</h2>
+<div style="margin-top: 28px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #002C77; color: #FFFFFF; font-size: 13px; font-weight: 700; height: 42px; align-items: center">
+<div style="padding: 0 16px">Type</div>
+<div style="padding: 0 12px">Resource</div>
+<div style="padding: 0 12px">Used for</div>
+<div style="padding: 0 16px">Link</div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #E9ECF1; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Code</div>
+<div style="padding: 0 12px; font-weight: 700">Project repository</div>
+<div style="padding: 0 12px">Full pipeline, tests, notebook and reports</div>
+<div style="padding: 0 16px"><a href="https://github.com/ArthurrMrv/bank_recommendations">github.com/ArthurrMrv/bank_recommendations</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #F6F7F9; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Data</div>
+<div style="padding: 0 12px; font-weight: 700">IBM synthetic card transactions</div>
+<div style="padding: 0 12px">24.4 million transactions, 2,000 customers and their cards</div>
+<div style="padding: 0 16px"><a href="https://www.kaggle.com/datasets/ealtman2019/credit-card-transactions">kaggle.com/datasets/ealtman2019/credit-card-transactions</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #F6F7F9; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Data</div>
+<div style="padding: 0 12px; font-weight: 700">Merchant category code list</div>
+<div style="padding: 0 12px">Standard codes that map each merchant to a spend sector</div>
+<div style="padding: 0 16px"><a href="https://github.com/greggles/mcc-codes">github.com/greggles/mcc-codes</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #E9ECF1; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Model</div>
+<div style="padding: 0 12px; font-weight: 700">PCA and K-Means, scikit-learn</div>
+<div style="padding: 0 12px">Customer segmentation into transactor, baseline and revolver</div>
+<div style="padding: 0 16px"><a href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn.org/stable/modules/clustering.html</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #E9ECF1; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Model</div>
+<div style="padding: 0 12px; font-weight: 700">X-Learner, Künzel et al., PNAS 2019</div>
+<div style="padding: 0 12px">Uplift estimate that decides whether to contact a customer</div>
+<div style="padding: 0 16px"><a href="https://www.pnas.org/doi/10.1073/pnas.1804597116">pnas.org/doi/10.1073/pnas.1804597116</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #E9ECF1; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Model</div>
+<div style="padding: 0 12px; font-weight: 700">Linear Thompson Sampling, Agrawal and Goyal, ICML 2013</div>
+<div style="padding: 0 12px">Learning algorithm that selects the single offer</div>
+<div style="padding: 0 16px"><a href="https://proceedings.mlr.press/v28/agrawal13.html">proceedings.mlr.press/v28/agrawal13.html</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #E9ECF1; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Model</div>
+<div style="padding: 0 12px; font-weight: 700">LangGraph agent with a hosted language model</div>
+<div style="padding: 0 12px">Message writer and independent reviewer, served through OpenRouter</div>
+<div style="padding: 0 16px"><a href="https://github.com/langchain-ai/langgraph">github.com/langchain-ai/langgraph</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #F6F7F9; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Benchmark</div>
+<div style="padding: 0 12px; font-weight: 700">MiniLM transaction classifier</div>
+<div style="padding: 0 12px">Transformer baseline that the linear text classifier was compared with</div>
+<div style="padding: 0 16px"><a href="https://huggingface.co/maaz-zaidi/transaction-classifier-minilm-en-ca">huggingface.co/maaz-zaidi/transaction-classifier-minilm-en-ca</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 130px 300px minmax(0, 1fr) 400px; background: #F6F7F9; font-size: 14px; line-height: 1.4; height: 50px; align-items: center">
+<div style="padding: 0 16px; font-weight: 700; color: #002C77">Benchmark</div>
+<div style="padding: 0 12px; font-weight: 700">Labelled transaction descriptions</div>
+<div style="padding: 0 12px">About 4.5 million labelled transactions used for the classifier comparison</div>
+<div style="padding: 0 16px"><a href="https://huggingface.co/datasets/mitulshah/transaction-categorization">huggingface.co/datasets/mitulshah/transaction-categorization</a></div>
+</div>
+</div>
+<div style="position: absolute; left: 64px; bottom: 24px; font-size: 12px; color: #4A5261">Prepared by Arthur</div>
+<div style="position: absolute; right: 64px; bottom: 24px; font-size: 12px; color: #4A5261">6</div>
 </div></section>
 </body></html>
